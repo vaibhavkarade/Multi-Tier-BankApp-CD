@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: bankapp
-        image: vaibhavkarade/bankapp:latest
+        image: vaibhavkarade/bankapp:v2
         ports:
         - containerPort: 8090
         env:
