@@ -20,7 +20,7 @@ spec:
       - name: bankapp
         image: vaibhavkarade/bankapp:v2
         ports:
-        - containerPort: 8090
+        - containerPort: 8080
         env:
         - name: SPRING_DATASOURCE_URL
           value: jdbc:mysql://mysql-service:3306/bankappdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
@@ -38,6 +38,6 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
-    targetPort: 8090
+    targetPort: 8080
   selector:
     app: bankapp
