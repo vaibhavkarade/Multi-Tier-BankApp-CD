@@ -6,8 +6,7 @@ kind: Deployment
 metadata:
   name: bankapp
 spec:
-  replicas: 2
-  revisionHistoryLimit: 1
+  replicas: 1
   selector:
     matchLabels:
       app: bankapp
@@ -18,7 +17,7 @@ spec:
     spec:
       containers:
       - name: bankapp
-        image: vaibhavkarade/bankapp1:v5
+        image: vaibhavkarade/bankapp123:latest
         ports:
         - containerPort: 8080
         env:
